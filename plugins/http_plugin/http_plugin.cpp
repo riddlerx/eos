@@ -341,7 +341,7 @@ namespace eosio {
             tcp::resolver::query query( tcp::v4(), host.c_str(), port.c_str());
             try {
                my->listen_endpoint = *resolver.resolve( query );
-               ilog( "configured http to listen on ${h}:${p}", ("h", host)( "p", port ));
+               ilog( "11111111111111111 configured http to listen on ${h}:${p}", ("h", host)( "p", port ));
             } catch ( const boost::system::system_error& ec ) {
                elog( "failed to configure http to listen on ${h}:${p} (${m})",
                      ("h", host)( "p", port )( "m", ec.what()));
