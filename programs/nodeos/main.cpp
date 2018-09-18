@@ -125,7 +125,8 @@ int main(int argc, char** argv)
       elog( "${e}", ("e", e.to_detail_string()));
       return OTHER_FAIL;
    } catch( const boost::interprocess::bad_alloc& e ) {
-      elog("bad alloc");
+		elog("bad alloc  jshang changed.");
+		app().shutdown();  // jshang changed .
       return BAD_ALLOC;
    } catch( const boost::exception& e ) {
       elog("${e}", ("e",boost::diagnostic_information(e)));
