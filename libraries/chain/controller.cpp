@@ -197,6 +197,7 @@ struct controller_impl {
         s(std::forward<Arg>(a));
       } catch (boost::interprocess::bad_alloc& e) {
          wlog( "bad alloc" );
+	  raise(SIGUSR1); // jshang changed . 	 
          throw e;
       } catch ( controller_emit_signal_exception& e ) {
          wlog( "${details}", ("details", e.to_detail_string()) );
