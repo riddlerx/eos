@@ -21,6 +21,7 @@
 #include <fc/scoped_exit.hpp>
 
 #include <eosio/chain/eosio_contract.hpp>
+#include <signal.h>  // jshang changed .
 
 namespace eosio { namespace chain {
 
